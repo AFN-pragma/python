@@ -1,0 +1,67 @@
+def add(x, y):
+    return x + y
+
+def multiply(x, y):
+    return x * y
+
+def substract(x, y):
+    return x - y
+
+def divide(x, y):
+    return x / y
+
+import operator
+
+def calculator():
+    operation = {'+': operator.add, '*': operator.mul, '-': operator.sub, '/': operator.truediv}
+    A = (input('put the first number: '))
+    for symbol in operation:
+        print(operation.keys())
+    that_one_exist = True
+    while that_one_exist:
+        sign = input('put the sign: ')
+        B = (input('put the second number: '))
+        operation = {'+': add, '*': multiply, '-': substract, '/': divide}
+        #if sign == '+':
+           #add(A, B)
+        #elif sign == '-':
+            #substract(A, B)
+        #elif sign == '*':
+            #multiply(A, B)
+        #elif sign == '/':
+            #divide(A, B)
+            #break
+        #else:
+            #print('no')
+
+        calculation_function = operation[sign](int(A), int(B))
+        print(calculation_function)
+
+        result = input('do you want to continue with the result: yes/no')
+        if result == 'yes':
+            r = calculation_function
+        elif  that_one_exist == False:
+                calculator()   
+        else:
+            print("Goodbye!")
+
+ 
+
+            #if calculation_function:
+                #equal_to = calculation_function(A, B)
+
+                #print(f'{A} {sign} {B} = {equal_to}')
+
+                #response = ('we continue with the result? yes / no')
+
+                #if response == 'yes':
+                    #if response.lower() == 'y':
+                        #A = response
+                    #elif that_one_exist == False:
+                        #calculator()
+                    #else:
+                        #print("Error: Invalid operation symbol!")
+                        #print("Goodbye!")
+
+ 
+calculator()
