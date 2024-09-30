@@ -22,17 +22,6 @@ def calculator():
         sign = input('put the sign: ')
         B = (input('put the second number: '))
         operation = {'+': add, '*': multiply, '-': substract, '/': divide}
-        #if sign == '+':
-           #add(A, B)
-        #elif sign == '-':
-            #substract(A, B)
-        #elif sign == '*':
-            #multiply(A, B)
-        #elif sign == '/':
-            #divide(A, B)
-            #break
-        #else:
-            #print('no')
 
         calculation_function = operation[sign](int(A), int(B))
         print(calculation_function)
@@ -41,27 +30,12 @@ def calculator():
         if result == 'yes':
             r = calculation_function
         elif  that_one_exist == False:
-                calculator()   
+                calculator()
+                break   
         else:
             print("Goodbye!")
-
- 
-
-            #if calculation_function:
-                #equal_to = calculation_function(A, B)
-
-                #print(f'{A} {sign} {B} = {equal_to}')
-
-                #response = ('we continue with the result? yes / no')
-
-                #if response == 'yes':
-                    #if response.lower() == 'y':
-                        #A = response
-                    #elif that_one_exist == False:
-                        #calculator()
-                    #else:
-                        #print("Error: Invalid operation symbol!")
-                        #print("Goodbye!")
-
- 
+            break
 calculator()
+
+
+
